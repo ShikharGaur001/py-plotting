@@ -1,0 +1,31 @@
+## Setting the Python Interpreter in VS Code
+
+When you create a virtual environment (venv) in your project, a new Python executable is placed inside the `venv/Scripts` directory (on Windows). To use this Python interpreter in VS Code:
+
+1. Press `Ctrl + Shift + P` to open the Command Palette.
+2. Type and select `Python: Select Interpreter`.
+3. Browse to your project's `venv\Scripts` folder and select the `python.exe` file.
+4. VS Code will now use this interpreter for running and debugging Python code in this workspace.
+
+This ensures your project uses the correct dependencies and environment.
+
+---
+
+## Creating a Virtual Environment and Installing matplotlib
+
+1. Open a terminal in your project folder.
+2. Run the following command to create a virtual environment named `venv` in the current folder:
+
+	```powershell
+	python -m venv .\venv
+	```
+
+3. Close the terminal and open a new one to ensure the environment is recognized by VS Code.
+4. Select the interpreter as described above (choose the `venv\Scripts\python.exe`).
+5. With the correct interpreter selected, install matplotlib:
+
+	```powershell
+	pip install matplotlib
+	```
+
+Now you are ready to start plotting with matplotlib in your isolated environment!
